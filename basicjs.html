@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>KALKULATOR JS</title>
+</head>
+<body>
+    <p id="input">
+        <p>Bilangan 1 <input id="bil1" type="text"></p>
+        <p>Bilangan 2 <input id="bil2" type="text"></p>
+    </p>
+    <p>Jenis
+        <select id="list" name="list">
+            <option value="+">Penjumlahan</option>
+            <option value="-">Pengurangan</option>
+            <option value="*">Perkalian</option>
+            <option value="/">Pembagian</option>
+        </select>
+    </p>
+    
+    <input type="submit" value="Hitung" onclick="operasi()">
+    <p>Hasil : </p>
+    <div id="hasil"></div>
+    
+    <script>
+        function operasi(){
+            if(list.value=="+"){
+                let a=document.getElementById("bil1").value;
+                let b=document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML=parseInt(a)+parseInt(b);
+                console.log(a,"+",b,"=",parseInt(a)+parseInt(b));
+            }
+            else if(list.value=="-"){
+                let a=document.getElementById("bil1").value;
+                let b=document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML=parseInt(a)-parseInt(b);
+                console.log(a,"-",b,"=",parseInt(a)-parseInt(b));
+            }
+            else if(list.value=="*"){
+                let a=document.getElementById("bil1").value;
+                let b=document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML=parseInt(a)*parseInt(b);
+                console.log(a,"*",b,"=",parseInt(a)*parseInt(b));
+            }
+            else if(list.value=="/"){
+                let a=document.getElementById("bil1").value;
+                let b=document.getElementById("bil2").value;
+                document.getElementById("hasil").innerHTML=parseInt(a)/parseInt(b);
+                console.log(a,"/",b,"=",parseInt(a)/parseInt(b));
+            }
+        }
+    </script>
+</body>
+</html>
